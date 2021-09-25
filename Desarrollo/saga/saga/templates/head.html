@@ -1,0 +1,73 @@
+{% load static %}
+
+
+
+{% block content %}
+
+<section class="head">
+    <div class="container col-xxl-8 px-4 mb-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'img/header.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Optimiza tus proyectos con Saga</h1>
+            <p class="lead">Una aplicación para facilitar la gestión de los proyectos de tu empresa</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">¡Solicitar Demo!</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="px-4 pt-5 my-5 text-center">
+        <h2>Es más que un trabajo, es una manera de trabajar juntos</h2>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Empieza con un tablero de Saga, listas y tarjetas. Personalízalo y amplíalo con más funciones a medida que crezca el trabajo en equipo. Gestiona proyectos, organiza tareas y fomenta el espíritu de equipo, todo en un solo lugar.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          </div>
+        </div>
+          <div class="container px-5">
+            <img src="{% static 'img/teamwork.svg' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+          </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 mt-5 mb-5 px-5" id="about">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h3 class="display-5 mb-3">Crea, agrega y mueve al instante</h3>
+                <p class="lead">Saga cuenta con una interfaz fácil de usar</p>
+              </div>
+        </div>
+    </div>
+
+    <div class="container col-xxl-8 px-4 mt-5 mb-5 px-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+            <div class="col-lg-6">
+                <h5>Decide como organizar tus tareas</h5>
+                <h4 class="display-5 mb-3">Ajusta tus proyectos</h4>
+                <p class="lead">Tu decides, tu escoges, tu lo haces, sin herramientas</p>
+              </div>
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'img/webpage.svg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5 my-5 text-center">
+        <div class="row flex-lg-row-reverse align-items-center">
+        <img class="d-block mx-auto mb-4" class="d-block mx-lg-auto img-fluid" src="{% static 'img/women-table.svg' %}" width="700" height="500">
+        <h1 class="display-5 fw-bold">Innova con Saga</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Saga es la mejor herramienta para gestionar proyectos</p>
+          <p class="lead mt-0">¿Qué estás esperando?</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+{% endblock %}

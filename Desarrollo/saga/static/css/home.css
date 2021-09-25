@@ -1,0 +1,40 @@
+/* Barra de Navegación */
+.navhome a{
+    text-decoration: none;
+    color: #f3f4f5 !important;
+    font-weight:bold;
+}
+
+.navhome .active{
+    text-decoration: none;
+    color: #f3f4f5 !important;
+    font-weight: 900;
+    border-bottom: 1px solid #E8E0DF;
+}
+
+.navhome a:hover{
+    color: #E8E0DF!important;
+    text-decoration: none;
+    font-weight: 900;
+}
+.navbar-nav{
+    justify-content: flex-end !important;
+}
+/* Head */
+.head{
+    margin-top: 10% !important;
+}
+
+.IndexFooter{
+    background-color: #4856F0;
+}
+
+.IndexFooter .nav-link, .IndexFooter p{
+    color:#f3f4f5!important;
+}
+
+.hrfooter{
+    width:80%!important;
+    color:#f3f4f5;
+    opacity: 1;
+}

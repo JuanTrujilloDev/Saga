@@ -1,0 +1,50 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+.IndexFooter{
+    background-color: #4856F0;
+}
+
+.IndexFooter .nav-link, .IndexFooter p{
+    color:#f3f4f5!important;
+}
+
+.hrfooter{
+    width:80%!important;
+    color:#f3f4f5;
+    opacity: 1;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #4856F0;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(72, 86, 251, 240), rgba(109, 120, 247));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(72, 86, 251, 240), rgba(109, 120, 247));
+  }
+  
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+    top: 13px;
+  }

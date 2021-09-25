@@ -1,0 +1,51 @@
+.html{
+    background-color: #f3f4f5;
+}
+
+.body{
+    background-color: #f3f4f5;
+}
+
+.color2 {color: #4856F0;
+
+}
+
+.bgcolor2 {background-color: #4856F0;
+    /* */
+
+}
+
+.color3 {color: #6D78F7;
+
+}
+
+.bgcolor3 {background-color: #6D78F7!important;
+    /* */
+
+}
+.color4 {color: #3243ff;
+}
+
+.bgcolor4 {background-color: #3243ff;
+    /* */
+
+}
+
+.btn-primary{
+    background-color:#4856F0;
+    color:#f3f4f5;
+    font-weight: bold;
+    border: none;
+}
+.btn-primary:hover{
+    background-color:#3243ff;
+    color:#f3f4f5;
+    font-weight: bold;
+    border: none;
+}
+
+p{
+    color:#091E42!important;
+    font-size: 1.5rem;
+    font-weight: 400!important;
+}
