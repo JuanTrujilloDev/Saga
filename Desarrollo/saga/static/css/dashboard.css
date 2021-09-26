@@ -1,0 +1,79 @@
+.main-admin{
+    min-height: 100vh;
+}
+
+
+/* Barra de Navegación */
+.navhome a{
+    text-decoration: none;
+    color: #f3f4f5 !important;
+    font-weight:bold;
+}
+
+.navhome .active{
+    text-decoration: none;
+    color: #f3f4f5 !important;
+    font-weight: 900;
+}
+
+.navhome a:hover{
+    color: #E8E0DF!important;
+    text-decoration: none;
+    font-weight: 900;
+}
+.navbar-nav{
+    justify-content: flex-end !important;
+}
+.navbar-toggler{
+    border: 1px solid #f3f4f5;
+    border-radius:  5px;
+}
+.navbar-toggler-icon{
+    
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(249,251,253, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Menu de la Izquierda Administrador*/
+
+.OptionAdmin{
+    border: none !important;
+    background: transparent !important;
+    margin-top: 3% !important;
+}
+.OptionAdmin .list-group-item{
+    border:none !important;
+    background: transparent !important;
+}
+
+.OptionAdmin a{
+    font-weight: bold !important;
+    color:#6D78F7 !important;
+    text-decoration: none !important;
+}
+.OptionAdmin a:hover{
+    color:#3243ff !important;
+    text-decoration: none !important;
+}
+.AdminPro .card{
+    border-radius: 10px !important;
+}
+#text{
+    color:#f3f4f5;
+}
+
+/* FORMULARIO */
+form .form-label{
+    font-weight: bold !important;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

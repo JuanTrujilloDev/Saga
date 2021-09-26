@@ -19,7 +19,9 @@
                     <div class="col-md-12 mb-4">
     
                       <div class="form-outline">
-                        {{form.username.error}}
+                        {% for error in form.username.errors %}
+                        <p class="text-danger">{{error}}</p> 
+                        {% endfor %}
                         {{form.username}}
                         <label class="form-label" for="firstName">Identificación</label>
                       </div>
@@ -29,8 +31,11 @@
   
                 <div class="row">
                   <div class="col-md-6 mb-4">
-  
+                    
                     <div class="form-outline">
+                      {% for error in form.first_name.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                       {{form.first_name}}
                       <label class="form-label" for="firstName">First Name</label>
                     </div>
@@ -39,6 +44,9 @@
                   <div class="col-md-6 mb-4">
   
                     <div class="form-outline">
+                      {% for error in form.last_name.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                       {{form.last_name}}
                       <label class="form-label" for="lastName">Last Name</label>
                     </div>
@@ -50,6 +58,9 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
+                      {% for error in form.email.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                       {{form.email}}
                       <label class="form-label" for="emailAddress">Email</label>
                     </div>
@@ -58,6 +69,9 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
+                      {% for error in form.telefono.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                       {{form.telefono}}
                       <label class="form-label" for="phoneNumber">Teléfono</label>
                     </div>
@@ -68,6 +82,9 @@
                     <div class="col-md-12 mb-4 pb-2">
     
                       <div class="form-outline">
+                        {% for error in form.direccion.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                         {{form.direccion}}
                         <label class="form-label" for="phoneNumber">Dirección</label>
                       </div>
@@ -79,6 +96,9 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
+                        {% for error in form.password1.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                         {{form.password1}}
                         <label class="form-label" for="emailAddress">Contraseña</label>
                       </div>
@@ -87,6 +107,9 @@
                     <div class="col-md-6 mb-4 pb-2">
     
                       <div class="form-outline">
+                        {% for error in form.password2.errors %}
+                      <p class="text-danger">{{error}}</p> 
+                      {% endfor %}
                         {{form.password2}}
                         <label class="form-label" for="phoneNumber">Repetir Contraseña</label>
                       </div>

@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/kanban.css'%}">
+{% endblock %}
+
+{% block content %}
+<section class="d-block sect-list">
+{% include 'navegacion.html'%}
+    <div class="text-center">
+    <div class="text-center">
+<!--MENU DE LA IZQUIERDA-->
+          <div class="container-fluid pt-3 col-md-12 row mx-auto">
+            <div class="col-md-2 mt-3 mb-5">
+                <a href="{{object.get_edit_url}}" class="btn btn-primary btn-lg col-md-12">Editar Proyecto</a>
+            </div>
+            <h2 class="font-weight-light text-white">{{object.nombre_clave}}</h2>
+            <div class="row flex-row py-3 container">
+                
+                <div class="col-sm-12 col-md-2">
+                    <div class="cardmg card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-archive"></i> Backlog</h5>
+                            <div class="items">
+                            {% for tarea in backlog %}
+                            <a href="{{tarea.get_absolute_url}}">
+                                <div class="card draggable shadow-sm  mb-3">
+                                    <div class="card-body p-2 ">
+                                        <div class="card-title">
+                                            <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                        </div>
+                                        <p>
+                                            {{tarea.descripcion}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+ 
+                            {% endfor %}
+                            <div class="col-md-12 mt-3 mb-5">
+                                <a href="{{object.get_tarea_create_url}}">
+                                    <div class="card draggable shadow-sm  mb-3">
+                                        <div class="card-body p-2 ">
+                                            <div class="card-title">
+                                               CREAR TAREA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                              </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-2">
+                  <div class="cardmg card bg-light mb-3">
+                      <div class="card-body">
+                          <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-ruler-combined"></i> Diseño</h5>
+                          <div class="items">
+                            {% for tarea in diseño %}
+                            <a href="{{tarea.get_absolute_url}}">
+                                <div class="card draggable shadow-sm  mb-3">
+                                    <div class="card-body p-2 ">
+                                        <div class="card-title">
+                                            <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                        </div>
+                                        <p>
+                                            {{tarea.descripcion}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-12 col-md-2 ">
+                <div class="cardmg card bg-light mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-code"></i> Desarrollo</h5>
+                        <div class="items">
+                            {% for tarea in desarrollo %}
+                            <a href="{{tarea.get_absolute_url}}">
+                                <div class="card draggable shadow-sm  mb-3">
+                                    <div class="card-body p-2 ">
+                                        <div class="card-title">
+                                            <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                        </div>
+                                        <p>
+                                            {{tarea.descripcion}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-2">
+              <div class="cardmg card bg-light mb-3">
+                  <div class="card-body">
+                      <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-search"></i>Testing</h5>
+                      <div class="items">
+                        {% for tarea in testing %}
+                        <a href="{{tarea.get_absolute_url}}">
+                            <div class="card draggable shadow-sm  mb-3">
+                                <div class="card-body p-2 ">
+                                    <div class="card-title">
+                                        <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                    </div>
+                                    <p>
+                                        {{tarea.descripcion}}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                      {% endfor %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-sm-12 col-md-2">
+            <div class="cardmg card bg-light mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-users"></i> Review</h5>
+                    <div class="items">
+                        {% for tarea in review %}
+                        <a href="{{tarea.get_absolute_url}}">
+                            <div class="card draggable shadow-sm  mb-3">
+                                <div class="card-body p-2 ">
+                                    <div class="card-title">
+                                        <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                    </div>
+                                    <p>
+                                        {{tarea.descripcion}}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                      {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-2">
+          <div class="cardmg card bg-light mb-3">
+              <div class="card-body">
+                  <h5 class="card-title text-uppercase text-truncate py-2"><i class="fas fa-star"></i> Done</h5>
+                  <div class="items">
+                    {% for tarea in done %}
+                    <a href="{{tarea.get_absolute_url}}">
+                        <div class="card draggable shadow-sm  mb-3">
+                            <div class="card-body p-2 ">
+                                <div class="card-title">
+                                    <a href="{{tarea.get_absolute_url}}" class="ca lead font-weight-light">{{tarea.nombre}}</a>
+                                </div>
+                                <p>
+                                    {{tarea.descripcion}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                  {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      </div>
+</div>
+</div>
+</section>
+{% endblock %}

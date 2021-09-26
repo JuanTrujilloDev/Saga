@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import MainAdmin, MainTrabajador, ProjectDetail, TareaUpdate, TareaCreateView, ProjectoCreate, ProjectoUpdate, ProjectoDelete, TareaDelete
 
 urlpatterns = [
+    path('main-trabajador/', MainTrabajador.as_view(), name="main-trabajador"),
+    path('main-admin/', MainAdmin.as_view(), name="main-admin"),
+    path('projecto-table/<str:pk>/<str:slug>', ProjectDetail.as_view(), name="project-detail"),
+    path('tarea-update/<str:pk>', TareaUpdate.as_view(), name="tarea-update"),
+    path('tarea-delete/<str:pk>', TareaDelete.as_view(), name="tarea-delete"),
+    path('tarea-create/<str:pk>/<str:slug>', TareaCreateView.as_view(), name="tarea-create"),
+    path('projecto-create', ProjectoCreate.as_view(), name="projecto-create"),
+    path('projecto-update/<str:pk>/<str:slug>', ProjectoUpdate.as_view(), name="projecto-update"),
+    path('projecto-delete/<str:pk>/<str:slug>', ProjectoDelete.as_view(), name="projecto-delete"),
     
 
 ]

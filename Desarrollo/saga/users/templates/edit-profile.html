@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+{% endblock %}
+
+{% block content %}
+<section class="d-block ">
+{% include 'navegacion.html'%}
+<div class="d-flex justify-content-center">
+<div class="container d-flex justify-content-center row">
+   <!--MENU DE LA IZQUIERDA-->
+   <div class="OptionAdmin card ms-auto col-md-3 text-start my-5 position-sticky">
+    <ul class="list-group list-group-flush mt-">
+  <!--PERFIL ADMIN LINKS-->
+  <li class="list-group-item ">
+    <a class="active" href="{% url 'main-admin' %}"><i class="far fa-home"></i>Home</a>
+  </li>
+  <li class="list-group-item ">
+    <a class="active" href="{{request.user.get_absolute_url}}"><i class="far fa-user"></i> Mi perfil</a>
+  </li>
+  <li class="list-group-item ">
+    <a href=""><i class="fas fa-sign-out-alt"></i> Salir</a>
+  </li>
+  </ul>
+</div>
+
+        <div class="col-md-9 mt-5">
+        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Información del Usuario</h3>
+              <form method="POST" action="{% url 'user-update' form.instance.slug %}">{% csrf_token %}
+
+                   {{form|bootstrap}}
+                  <div class="col-md-12 mt-3 mb-5">
+                      <button type="submit" class="btn btn-primary btn-lg col-md-12">Actualizar</button>
+                  </div>
+              </form>
+              </div>
+
+</div>
+</div>
+
+</section>
+
+{% endblock %}

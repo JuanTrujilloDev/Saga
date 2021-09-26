@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name="home"),
     path('accounts/', include('users.urls')),
+    path('', include('projects.urls')),
     
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

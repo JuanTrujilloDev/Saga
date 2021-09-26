@@ -10,7 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from django.urls import reverse_lazy
+
 from pathlib import Path
+
+from django.urls.base import reverse
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,8 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'saga',
-    'projects'
+    'projects',
+    'bootstrapform',
 ]
+
+CRISPY_TEMPLATE_PACKS = 'bootstrap4'
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -132,6 +139,15 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / "media"
 
 MEDIA_URL = '/media/'
+
+LOGIN_URL = reverse_lazy('login')
+
+LOGOUT_URL = reverse_lazy('logout')
+
+LOGIN_REDIRECT_URL = reverse_lazy('main-admin')
+
+LOGOUT_REDIRECT_URL = reverse_lazy('home')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
